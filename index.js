@@ -16,7 +16,7 @@ module.exports = {
 
     registry.add('js', {
       name: 'ember-cli-babel',
-      ext: getBabelOptions(addon)['filterExtensions'] || 'js',
+      ext: ['js', 'jsx'],
       toTree: function(tree) {
         return require('broccoli-babel-transpiler')(tree, getBabelOptions(addon));
       }
